@@ -14,7 +14,7 @@
 </head>
 <body>
   
-<section class="hero is-black is-medium">
+<section class="hero is-black">
 	<div class="hero-head">
 		<header class="nav">
 			<div class="container">
@@ -24,7 +24,13 @@
 					</a>
 					
 				</div>
-				<div class="nav-right nav-menu" is-active>
+				<span class="nav-toggle">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+				<div class="nav-right nav-menu">
 					<a href="#" target="_blank" class="nav-item">Inicio</a>
 					<a href="#" target="_blank" class="nav-item">Noticias</a>
 					<a href="#" target="_blank" class="nav-item">Publicaciones</a>
@@ -62,18 +68,6 @@
     </p>
   </div>
 </footer>
-<script type="text/javascript">
-	$(document).ready(function() {
 
-  // Check for click events on the navbar burger icon
-  $(".navbar-burger").click(function() {
-
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      $(".navbar-burger").toggleClass("is-active");
-      $(".navbar-menu").toggleClass("is-active");
-
-  });
-});
-</script>
 </body>
 </html>
