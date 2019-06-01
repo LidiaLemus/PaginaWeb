@@ -8,48 +8,37 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
 
-    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
 
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css">
+   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 <body>
   
-<section class="hero is-black">
-	<div class="hero-head">
-		<header class="nav">
-			<div class="container">
-				<div class="nav-left">
-					<a href="#" class="nav-item"  alt="Logo" class="logo" style="height: 50px;">
-						<img src="imagen.jpg">
-					</a>
-					
-				</div>
-				<span class="nav-toggle">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</span>
-				<div class="nav-right nav-menu">
-					<a href="#" target="_blank" class="nav-item">Inicio</a>
-					<a href="#" target="_blank" class="nav-item">Noticias</a>
-					<a href="#" target="_blank" class="nav-item">Publicaciones</a>
-					<a href="#" target="_blank" class="nav-item">Quienes Somos</a>
-					<span class="nav-item">
-						<a href="#" target="_blank" class="button is is-black is-inverted">
-							<span class="icon"><i class="fa fa-facebook"></i></span>
-							<span>Facebook</span>
-						</a>
-						
-					</span>
-				</div>
-				
-			</div>
-			
-		</header>
-		
-	</div>
-</section>
+ <nav class="navbar is-dark">
+        <div class="container">
+            <div class="navbar-brand">
+                <a  class="navbar-item" href="#" style="font-weight: bold;">
+                    Mi pagina
+                </a>
+                <span class="navbar-burger burger" data-target="navMenu" >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a href="#" class="navbar-item" is-active>inicio</a>
+                    <a href="#" class="navbar-item">Noticas</a>
+                    <a href="#" class="navbar-item">Publicaciones</a>
+                    <a href="#" class="navbar-item">Quienes somos</a>
+                </div>
+            </div>
+        </div>
+
+    </nav>
 <div class="gallery">
 	<img src="imagen.jpg">
 	<img src="imagen.jpg">
@@ -68,6 +57,16 @@
     </p>
   </div>
 </footer>
-
+<script>
+    (function(){
+        var burger = document.querySelector('.burger');
+        var nav = document.querySelector('#'+burger.dataset.target);
+        burger.addEventListener('click',function(){
+          burger.classList.toggle('is-active');  
+          nav.classList.toggle('is-active');
+        });
+    })();
+    
+    </script>
 </body>
 </html>
